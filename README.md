@@ -1,4 +1,4 @@
-# Voyage I: Federation from Day One
+# This is an Apollo Federation practice based on Apollo tutorials
 
 Welcome to FlyBy, the companion app of Odyssey Voyage I! You can find the [course lessons and instructions in Odyssey](https://odyssey.apollographql.com/federation-part1/), Apollo's learning platform.
 
@@ -59,18 +59,18 @@ To run the servers in the `final` folder:
 
 1. Get the latest reviews for the homepage.
 
-    ```graphql
-    query LatestReviews {
-      latestReviews {
-        comment
-        rating
-        location {
-          name
-          description
-        }
-      }
-    }
-    ```
+   ```graphql
+   query LatestReviews {
+     latestReviews {
+       comment
+       rating
+       location {
+         name
+         description
+       }
+     }
+   }
+   ```
 
 1. Get details for a specific location.
 
@@ -93,7 +93,13 @@ To run the servers in the `final` folder:
 1. Submit a review for a location.
    ```graphql
    mutation submitReview {
-     submitReview(review: { comment: "Wow, such a great planet!", rating: 5, locationId: "1" }) {
+     submitReview(
+       review: {
+         comment: "Wow, such a great planet!"
+         rating: 5
+         locationId: "1"
+       }
+     ) {
        code
        success
        message
